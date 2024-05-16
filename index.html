@@ -79,6 +79,37 @@
         #avatarBox {
             background-color: #ffcc5c; /* Yellowish color as an example, change accordingly */
         }
+
+        .feedback-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 150px;
+            height: 70px;
+            background: linear-gradient(45deg, #e65c00, #ffd11a); /* Gradient background */
+            border: none;
+            border-radius: 50px; /* Make it oval */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            font-size: 1.2em;
+            color: white;
+            cursor: pointer;
+            z-index: 2;
+            transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+        }
+
+        .feedback-button:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        .feedback-button img {
+            width: 40px; /* Adjust image size */
+            height: 40px; /* Adjust image size */
+            border-radius: 50%; /* Make image round */
+            margin-right: 10px; /* Add some spacing between image and text */
+        }
     </style>
 </head>
 <body>
@@ -98,6 +129,11 @@
         </div>
     </div>
 
+    <button class="feedback-button" onclick="openFeedbackForm()">
+        <img src="fd_btn.jpg" alt="Feedback">
+        Feedback
+    </button>
+
     <script>
         function openLyricsWindow() {
             // Open a new window for lyrics generation
@@ -111,7 +147,14 @@
 
         function openAvatarWindow() {
             // Open a new window for avatar imitation
-            window.open('avatar_imitation.html', '_blank');
+            window.open('https://ompramod-swiftai-avatar-dance.hf.space', '_blank');
+        }
+
+        function openFeedbackForm() {
+            // Open the feedback page
+ window.open('http://localhost/feedback_index.html', '_blank');
+           
+            
         }
     </script>
 </body>
